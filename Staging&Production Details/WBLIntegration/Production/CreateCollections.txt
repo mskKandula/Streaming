@@ -1,0 +1,7 @@
+-Run below queries on NewLMS2021 Production DB
+
+
+db.createCollection("InstituteWorkplaceAssociation")
+db.createCollection("StudentMentorAssociation")
+db.createCollection("Sectors")
+db.createCollection("SubjectTypes")

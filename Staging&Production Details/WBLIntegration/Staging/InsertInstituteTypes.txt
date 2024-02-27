@@ -1,0 +1,43 @@
+Note : Please call the activity "InsertInstituteType" 
+       with below data (individual objects) from PostMan.
+
+
+{
+    "fieldNameForDefaultPassword" : "lms123",
+    "instituteTypeId" : "4",
+    "intakeControl" : true,
+    "admissionEmailGeneration" : "Admission",
+    "loginGeneration" : true,
+    "paymentRequired" : true,
+    "fieldNameForDefaultLogin" : "",
+    "instituteTypeName" : "WBLInstitute",
+    "loginToBeConsidered" : true,
+    "isEnabled" : true,
+    "instituteRegistrationFlow" : "From New LMS"
+},
+{
+    "instituteTypeId" : "5",
+    "loginToBeConsidered" : true,
+    "instituteRegistrationFlow" : "From New LMS",
+    "intakeControl" : true,
+    "loginGeneration" : true,
+    "fieldNameForDefaultPassword" : "lms123",
+    "instituteTypeName" : "WorkPlace",
+    "isEnabled" : true,
+    "paymentRequired" : false,
+    "admissionEmailGeneration" : "Confirmation",
+    "fieldNameForDefaultLogin" : ""
+},
+{
+    "admissionEmailGeneration" : "Confirmation",
+    "fieldNameForDefaultLogin" : "",
+    "fieldNameForDefaultPassword" : "lms123",
+    "instituteRegistrationFlow" : "From New LMS",
+    "instituteTypeId" : "6",
+    "instituteTypeName" : "PlacementPartner",
+    "intakeControl" : true,
+    "isEnabled" : true,
+    "loginGeneration" : true,
+    "loginToBeConsidered" : true,
+    "paymentRequired" : true
+}

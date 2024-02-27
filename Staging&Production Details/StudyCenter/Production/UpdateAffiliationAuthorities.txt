@@ -1,0 +1,4 @@
+// Affiliation Authorities Collection
+
+db.getCollection('AffiliationAuthorities').updateMany({"authourizationType":"WBLInstitute"},
+{$push:{"authourizationType": "StudyCenter"}})

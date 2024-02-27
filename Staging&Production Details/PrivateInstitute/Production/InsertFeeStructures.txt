@@ -1,0 +1,13 @@
+Note : Please call the activity "CreateFeeStructures" 
+       with below data (individual objects) from PostMan.
+
+{
+    "displayName" : "Learning Fees",
+    "isActive" : true,
+    "endDate" : 1669959000000.0,
+    "startDate" : 1638423000000.0,
+    "typeOfFee" : "LMS",
+    "amount" : 100.0,
+    "instituteTypeId" : "10",
+    "instituteTypeName" : "PrivateInstitute"
+}

@@ -1,0 +1,38 @@
+1. Validation to Pin code while registering the institute.(Done)
+   Validation to mobile number while registering the institute.(Done)
+2. Change in instructions on 'registrationsuccess' page 
+and in 'Institute Registration Successful' email template.(Done)
+3. Back dated academic year- start & end date, only for WBL(Done)
+4. Course code is not allowing space & dash(-) in between 
+the codes.(Can't, Discussed with Deepti mam )
+5. Keep the course type as- Theory, Project/Report (Done)
+(For IGNOU it is Theory and Internship report & for YCMOU it is Theory & Mini Project)
+6. Per page- drop down value- 'Show a alot' (Done)
+7. Change label- Student--> Intern (i18N)(Done)
+8. While entering the Employee code in 'Add single faculty'
+ it is accepting space in the code (Ex:Mentor 1), 
+but in 'Add multiple faculties' it is not accepting 
+the space in the code (Ex: Mentor2).(Done)
+9. While generating the report of users details what if a 
+user type is selected and in employee code we provide 
+'All' as a option instead of seleting a specific Employee 
+code? Is it possible?(discuss with Deepti mam)
+10. In 'Class course allocation' can we have multi-select 
+option to select the subjects?(No)
+11. I have added two mentors & two appraisers. 
+Later I have removed those two appraisers from 'List of 
+Faculty'. But still, i could see those two appraisers in 
+'Login & password recovery' section.(Done)
+12.While registering the Workplaces, kindly keep the 
+'Select Sector' drop down values in alphabetical order(Done)
+13. Intake option in multiple centres registration template 
+in super admin login, but no field in single institute registration
+(Discussed with Aiswariya & Deepti mam, Done)
+14. Proper Error Description in Downloaded Excel while
+multiple registration of institutes(informed to Aiswariya, Done)
+15. Subject Type Incase of Jobprofile (Workplace)
+(Discussed with Deepti mam, Done)
+16. Label on toggle button (Done)
+17. RTFEditor on jobprofile(Done)
+18. If no Email also, activity should work (Done)
+19. WBL specific Email Templates (Explained to Mrunalini,Done) 

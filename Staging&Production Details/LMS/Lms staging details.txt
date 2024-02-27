@@ -1,0 +1,4 @@
+172.31.40.172 -IP
+port 2016
+same username and passoword
+STG_LMSFramework - DB Name

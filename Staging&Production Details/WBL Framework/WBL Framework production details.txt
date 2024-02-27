@@ -1,0 +1,9 @@
+DB config for production
+10.15.15.197
+username:- writer
+pass:- writer#123
+DBname:- WBLFramework
+port:- 2016
+
+_p- dhanashreek#123
+- dhanashreek@mkcl.org

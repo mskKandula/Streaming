@@ -1,0 +1,26 @@
+{
+    "roles" : [ 
+        {
+            "roleId" : "1sTGLyEv6capfZDjYSw4M4TyOmD",
+            "roleName" : "ClassTeacher"
+        }
+    ],
+    "createdOn" : 1622151724.0,
+    "empCode" : "",
+    "emailId" : "",
+    "mobileNumber":"",
+    "firstName" : "Aiswariya",
+    "lastName" : "P"
+    "clientId" : "1t6BZF4uNV5TeZ6y52BcnBz3pyu",
+    "isDeleted" : false,
+    "institute" : {
+        "instituteId" : "IN070500001",
+        "instituteName" : "Delhi University",
+	"instituteType":""
+    },
+    "profileType":"secondaryProfiles"
+    "createdBy" : "",
+    "facultyId" : "1t8XWuP6C3nDCo15JGOMCrstQW1",
+    "activationDate":"",
+    "deactivationDate":""
+}

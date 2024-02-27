@@ -1,0 +1,18 @@
+Discuss the case of 'Keep source profile active' with Deepti Ma'am- 
+1. What if the interns are transferred to next semester & 
+then we decide to keep the source profile active?
+(Need new form/page)
+
+2. The interns those are 'All clear' in 1st semester & are 
+transferred to 2nd semester should also be able to see the 
+data (learning, assignments, etc.) from previous semester.
+(Done)
+
+3. If students transferred without the payment check, 
+How does Admin know who need to pay later
+(can see from student details)
+
+Most of the activities are with just(clientId/studentId),
+we get error later when student transferred to another 
+standard/shift/division & also isActive, isDeleted also missing
+

@@ -1,0 +1,4 @@
+//Run query on "SystemRoles" Collection
+
+db.getCollection('SystemRoles').updateMany({"roleApplicableTo" :"School"},
+{$push : {"roleApplicableTo" :"PrivateInstitute"}})

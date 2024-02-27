@@ -1,0 +1,28 @@
+ <div
+          class="alert alert-warning"
+          v-else-if="
+            studentSubmittedDetails &&
+            studentSubmittedDetails.evaluation &&
+            studentSubmittedDetails.evaluation.evaluationResult &&
+            studentSubmittedDetails.evaluation.evaluationResult === 'Pending'
+          "
+        >
+          <div class="d-flex">
+            <span class="mdi mdi-emoticon-neutral-outline mdi-48px" />
+            <div class="ml-3">
+              <h5>{{ $store.getters.getUserDetails.userFirstName }}</h5>
+              <h6 class="h6">Your test is not evaluated</h6>
+            </div>
+            <div class="ml-auto text-center">
+              <h6 class="h6">
+                {{ $t("TestAttemptReport.Test_Score") }}
+              </h6>
+              <h4 class="mb-0">
+                {{ studentSubmittedDetails.evaluation.obtainedScore }} /
+                <span class="text-md">{{
+                  studentSubmittedDetails.evaluation.totalScore
+                }}</span>
+              </h4>
+            </div>
+          </div>
+        </div>

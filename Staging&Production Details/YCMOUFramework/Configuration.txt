@@ -1,0 +1,16 @@
+Core Studio Details:
+
+Server IP : 43.241.36.235
+
+Host Name : mongo
+
+Port : 3348
+
+DB Details :
+
+Database name : DEV_YCMOUWBLFramework
+
+Database IP : 10.15.20.69
+
+Port : 2016
+

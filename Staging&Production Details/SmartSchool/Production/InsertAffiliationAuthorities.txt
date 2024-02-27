@@ -1,0 +1,24 @@
+Note : Please call the activity "CreateAffiliationAuthorities" 
+       with below data (individual objects) from PostMan.
+
+
+{
+    "city" : "Pune",
+    "authourizationType" : ["SmartSchool"],
+    "abbreviation" : "MKCL",
+    "address" : "Pune",
+    "authorityTypeName" : "MKCL",
+    "fax" : "",
+    "affiliationAuthorityName" : "Maharashtra Knowledge Corporation Limited (MKCL)",
+    "authorityType" : "MKCL",
+    "email" : "",
+    "state" : {
+        "stateId" : 27.0,
+        "stateName" : "Maharashtra"
+    },
+    "website" : "",
+    "country" : {
+        "countryName" : "India",
+        "countryId" : 113.0
+    }
+}

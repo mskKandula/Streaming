@@ -1,0 +1,60 @@
+Development & Integration of WBL Framework with WorkPlace Association
+
+1.Institute Registration Types :
+
+	a.WBL Institute
+
+	b.WorkPlace
+
+2.Affiliation Authority Types :
+	
+	a.IGNOU
+	
+	b.YCMOU
+
+3.Multiple Institutes Registration (Excel Import)
+
+
+4.WBL Institute :
+
+	a.Institute WorkPlace Association
+
+	b.Intern WorkPlace Association
+		i.Multiple Intern Association
+		ii.Disassociation & Reassociation of Intern
+		iii.Email Notification on Association & Disassociation 
+
+	c.Institute Intern Mentor Association
+		i.New Role Mentor
+		ii.Multiple Intern Association
+		iii.Disassociation & Reassociation of Intern
+
+	d.Intern Academic Transfer
+		i.Multiple Active Year & Semesters
+		ii.Multiple Active Profiles of Interns
+		iii.Profile Selection & Proper Navigation
+		iv.Intern Login Disable on Fee Payment Status
+	
+	e.Livedemy (WBL Student Login)
+
+
+5.WorkPlace:
+
+	a.New Workplace Admin Dashboard
+
+	b.Intern Department Allocation
+		i.Multiple Intern Allocation with JobProfiles attached
+		ii.Allocated Intern Department Details
+
+	c.Allocated Interns to Trainer View
+
+	d.No New Test, Quiz, Assignment & HomeWork on student login,
+	  If he Disassociated from WorkPlace
+
+6. Institute Specific Labels with I18N Support
+
+7. Institute Specific Emails
+
+
+
+

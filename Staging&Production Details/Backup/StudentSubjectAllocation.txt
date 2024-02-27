@@ -1,0 +1,41 @@
+    <div class="col-md-4">
+            <div class="form-group">
+              <label>
+                {{
+                  $t(
+                    getInstituteTypeSpecificLabel("StudentDetailsView.division")
+                  )
+                }}
+
+                <span class="text-danger">*</span></label
+              >
+              <multiselect
+                v-model="metadata.division"
+                :placeholder="
+                  $t(
+                    getInstituteTypeSpecificLabel(
+                      'StudentDetailsView.placeholder_select_division'
+                    )
+                  )
+                "
+                label="miscellaneousName"
+                track-by="miscellaneousId"
+                :options="divisionOption"
+                :multiple="false"
+                :taggable="false"
+                :show-labels="false"
+              />
+              <div
+                class="text-danger"
+                v-if="submitted && !$v.metadata.division.required"
+              >
+                {{
+                  $t(
+                    getInstituteTypeSpecificLabel(
+                      "StudentDetailsView.error_required_division"
+                    )
+                  )
+                }}
+              </div>
+            </div>
+          </div>

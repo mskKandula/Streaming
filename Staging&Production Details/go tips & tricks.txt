@@ -1,0 +1,13 @@
+Data Serialization :
+ 1.use "encoding/gob"(go binary) for golang only services, supports all golang types.
+ 2.use "encoding/json"(javascript object notation) for communication over different languages.
+ 3.use gzip to compress the bytes.
+
+Goroutines:
+ 1.use them for i/o operations
+ 2.use channels for communication over different goroutines
+ 3.use sync.waitgroup instead of channels if no communication
+ 4.use sync.mutex to lock & unlock resources to prevent race conditions
+ 5.close channel in the same func in which its opened else use defer in go func
+
+

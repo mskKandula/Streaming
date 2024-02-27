@@ -1,0 +1,17 @@
+Note : Please call the activity "InsertInstituteType" 
+       with below data (individual objects) from PostMan.
+
+
+{
+    "fieldNameForDefaultPassword" : "lms123",
+    "instituteTypeId" : "9",
+    "intakeControl" : true,
+    "admissionEmailGeneration" : "Admission",
+    "loginGeneration" : true,
+    "paymentRequired" : true,
+    "fieldNameForDefaultLogin" : "",
+    "instituteTypeName" : "StudyCenter",
+    "loginToBeConsidered" : true,
+    "isEnabled" : true,
+    "instituteRegistrationFlow" : "From New LMS"
+}

@@ -1,0 +1,94 @@
+MFS bugs:
+Admin Login
+1. InstituteTypeSpecificLabels needed copy the college level and mark as WBL-University & Workplace(done)
+2. if InstituteType === ALC || WBL-University || Workplace hide Payments tile (done)
+
+FullName(Can be regional language , used for certification) field required in Single & Multiple student registration
+fullName has no validations & allow - ,
+excel import change also (done)
+
+admin(full name order(firstName-MiddleName-lastName))(lastName-firstName-MiddleName))) 
+store in db(language & fullname pattern)
+
+systemsectors collection(master sectors, institute Type)
+
+representative role in systems role(done)
+
+Insert a field systemRoles(roleApplicableTo[InstituteType])(done)
+
+BBA-FirstYear/BS-FirstYear(should be workprofile) BBA 1st Year (SM)
+
+mentor student association form should be visible to university(done)
+
+dump fee structure details as ALC.(done)
+
+WorkPlace and PlacementPartner dashboard need to be designed
+
+workprofileDetails textbox on mentorstudentassociation(done)
+
+profile of workplace(need to be developed)
+
+session to become financial year for workplace
+
+department inplace of standard(done)
+
+job profile inplace of subject(done)
+
+No of students count of WBL & all students Excel(batchName) (3 batches)to share with dhanasree(done)
+
+Add asscoiation start & end dates in table(done)
+
+show only abbreviation of institute in table else make 
+one with first letters of the words(done)
+
+Label for toggle button(Active - Inactive)(done)
+
+attachment code should be big(Done)
+
+Need excel file for institute specific labels by 
+institute type(done)
+
+remove division in workplace(later)
+
+workplace admin dashboard should be different (new)(done)
+
+University enrollment Number(roll Number in  WBL University,
+WorkPlace)
+
+Mentor is a part of college not workplace(done)
+
+WBL University to WBL Institute(done)
+
+Intern In place of Student(WBL Institute)
+
+Fetch Mentor from db to associate with subjects/classes(done)
+
+Trainers in workplace & Mentor in WBL & 
+its association(done)
+
+during the session if new subject added to class/student
+(later)
+
+remove mentor link in workplace(done)
+
+remove workplace from mentorform in wblInstitute & 
+fetch mentors from wblInstitute(done)
+
+check the home link on teacher login(done)
+
+student specific assignment form same as 
+assignment(by mentor & trainer) show student list & 
+select students
+
+LiveDemy Integration link needed (Done)
+
+Multiple standard allocation to student
+(Saudi,Workplace & College)(Done)
+
+New Page for student profile selection if more than 1 
+active profile else directly route(Done)
+
+change the activity (getStudentAcademicProfileDetails) 
+remove clientId & fetch the student array(Done)
+
+create a new page (Navigator) for student profile routing(Done)

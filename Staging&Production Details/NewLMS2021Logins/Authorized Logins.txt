@@ -1,0 +1,107 @@
+---------------SuperAdmin--------------------------
+Url : https://newlmsdevp.mkcl.org/lms/#/superAdmin
+username is: SuperAdmin
+Password: lms123
+
+
+
+WBLInstitute :
+
+Admin :
+
+Your username is: IN272500067
+Password: lms123
+http://newlmsdevp.mkcl.org/lms/#/62898817043452211
+
+Faculty:
+
+Your username is: bhagwats1t
+Password: lms123
+InstituteId: IN272500067
+
+Your username is: menkap1t
+Password: lms123
+InstituteId: IN272500067
+
+Mentor:
+
+Your username is: samikshal1t
+Password: lms123
+InstituteId: IN272500067
+
+Your username is: swapnilk1t
+Password: lms123
+InstituteId: IN272500067
+
+
+Students:
+
+Your username is: mrunalinip1
+Password: lms123
+InstituteId: IN272500067
+
+Your username is: suyogc1
+Password: lms123
+InstituteId: IN272500067
+
+
+
+WorkPlace :
+
+Admin:
+Your username is: IN070500006
+Password: lms123
+http://newlmsdevp.mkcl.org/lms/#/10122451733505545634
+
+Trainer:
+
+Your username is: mahendrav1t
+Password: lms123
+InstituteId: IN070500006
+
+WorkPlace:
+
+Admin:
+
+
+Your username is: IN282200015
+Password: lms123
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/906554344093056018
+
+Trainer :
+
+Your username is: anandk1t
+Password: lms123
+
+InstituteId: IN282200015
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/906554344093056018
+
+
+
+http://localhost:8080/lms/#/5405384816548394137
+IN070300001
+lms123
+
+"instituteId" : "IN272500082",
+    "instituteUrl" : "72472264788393138",
+
+
+Your username is: IN282200018
+Password: lms123
+
+Link for Login: /906559841651197073
+
+Details: Parent Institute Details: 
+Sony Entertainment Studio : po10335992829125823997
+Your username is: IN273500011
+Password: lms123
+
+Admin Login: divyad1t
+Password: lms123
+
+Child Institute Details: 
+Sony Live App Entertainment Institute: 10335989530590939364
+Your username is: IN273500012
+Password: lms123

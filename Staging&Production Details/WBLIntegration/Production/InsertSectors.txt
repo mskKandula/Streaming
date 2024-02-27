@@ -1,0 +1,372 @@
+Note : Please call the activity "CreateSectors" 
+       with below data from PostMan.
+
+[
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3bb"),
+        "title" : "Educational",
+        "sectorId" : "1cilV8Wlzod2f8h5OGUuphTxqnE"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3bc"),
+        "title" : "Educational Sector",
+        "sectorId" : "1cilkqaAzF3tHZIVdMGkONAZI90"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3bd"),
+        "title" : "Quality Check of MS-CIT Welcome 2020 course  ",
+        "sectorId" : "1ckl5Ymr6MgS1z18BLlY6KwYkZR"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3bf"),
+        "title" : "telecalling",
+        "sectorId" : "1ct75N8dH13qgbtZz6yX0sMdiW3"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c2"),
+        "title" : "business Developement  Excutive",
+        "sectorId" : "1d219peEVyfOn1wFVKEpaW4reEX"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c3"),
+        "title" : "Marketing Management /skill Development ",
+        "sectorId" : "1d27ZHUP5wYxx5vSWzl3Be4to53"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c4"),
+        "title" : "Learning Innovations Program ",
+        "sectorId" : "1d74quGXrq5G15LN5ru3MUGVTbX"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c5"),
+        "title" : "Skill Development",
+        "sectorId" : "1d75TEnEvxBaZtkjAQFTLdJA4uI"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c6"),
+        "title" : "Mobilization",
+        "sectorId" : "1d9pU42ddB4M1zGKJJnYQFrvU7E"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c7"),
+        "title" : "marketing management /skill development ",
+        "sectorId" : "1d9vEPFy1x4AyQw7ShsXtaDyKD0"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3c8"),
+        "title" : "BBASM",
+        "sectorId" : "1dA1RejNtX9o8yJe9cnujmsfWgW"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3cc"),
+        "title" : "BBA (SM) FY SEM I",
+        "sectorId" : "1dAi4bSmHMn703SWZ0CPaxxwEbn"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3cd"),
+        "title" : "Service",
+        "sectorId" : "1dA7SEPkFlxj567JfnjR7A6fOwg"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3cf"),
+        "title" : "NPMP",
+        "sectorId" : "1dAN74lYaJaS7o3qZyQE6qLWQqu"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3d1"),
+        "title" : "Mission mode skill development",
+        "sectorId" : "1dAnYEWCysxwaX7o87XspN6t4Tr"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3d3"),
+        "title" : "bihar mode skill development mission",
+        "sectorId" : "1dApPQWVBb0wSf02Smb1g2skm1K"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3d4"),
+        "title" : "know-IT",
+        "sectorId" : "1dB3QO1uPF8zbu1lPcPxQhm6cTY"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3db"),
+        "title" : "Education",
+        "sectorId" : "1dFP4NTw5dtvSiXLsnB1zZqPoLV"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3de"),
+        "title" : "MARKETING",
+        "sectorId" : "1dQxkLYPAtZeUTv39MB8MfdDKVK"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3df"),
+        "title" : "ENTERPRENERSHEEP RIPORT",
+        "sectorId" : "1dQxpArBl65wsthYe3CuegcbGB2"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3e1"),
+        "title" : "BSDM",
+        "sectorId" : "1dgGVNPUJ3eJSSiz7ROYdorZpm7"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3e3"),
+        "title" : "private",
+        "sectorId" : "1ju2uMQjFS694JiMglN89maeNkY"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3e4"),
+        "title" : "Manufacturing and Third Party Manufacturing",
+        "sectorId" : "1ju38G9OcYAPY4nKEKaJh9U8KZM"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3e6"),
+        "title" : "sales and Marketing",
+        "sectorId" : "1lBQvJI1cGxp6A6RIcZXrmcOw1b"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3e8"),
+        "title" : "Basics of Marketing",
+        "sectorId" : "1lBRZUKm1CzrwFyF0ifeBOJv0bS"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3eb"),
+        "title" : "IIFL",
+        "sectorId" : "1lahaMrxFB1Vy3lS3n7xoqw8jzx"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3ed"),
+        "title" : "MSCIT teaching  Ms excel",
+        "sectorId" : "1lejIpj0GUyw8iWQNDJcmfpZL10"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3ef"),
+        "title" : "imperial",
+        "sectorId" : "1m0LFeFc85RctbmdHGTEzCU14ot"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3f2"),
+        "title" : "pharmaceutical manufacturing",
+        "sectorId" : "1mdoTQoR0FLQTAbzzVQi0dip80n"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3f4"),
+        "title" : "Dharmani health and fitness ",
+        "sectorId" : "1me9EVm4NE5MFP6fEzzFiSXZLkH"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3f9"),
+        "title" : "Mission mode skill development program sector",
+        "sectorId" : "1mwxG23HJXYGOosUuONhlrEs3uE"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3fa"),
+        "title" : "LLC",
+        "sectorId" : "1n0300jIU94sInK56spdaPeFcRD"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3fc"),
+        "title" : "ALC Suyash Computer Abloli",
+        "sectorId" : "1n2mA1yXfrcGGJQBqg5T1E8b9dD"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3fd"),
+        "title" : "Digital Marketing",
+        "sectorId" : "1n3f6bvKoSrY5OspNmAG8AeAAoh"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3fe"),
+        "title" : "IIFL securities which is an Stock Brokerage Company in Financial",
+        "sectorId" : "1n5gz3Mt6vlyc0o17yA0Bna4PBj"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa3ff"),
+        "title" : "Finance ",
+        "sectorId" : "1nkp1SAlq2ZJdhaaxwq8wZCPjBa"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa401"),
+        "title" : "Exa mobility Pvt Ltd",
+        "sectorId" : "1n68LOZLqGEa0gxTArcppdSQgbd"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa402"),
+        "title" : "accountant ",
+        "sectorId" : "1n6B9JzKT60BJt5TQAjeJMgv39D"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa404"),
+        "title" : "IIFL Securities which is an Stock Brokerage company with Financial Services in Finance",
+        "sectorId" : "1n6FVQGdSGpqmc8cneAFPvEagOh"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa406"),
+        "title" : "customer handaling",
+        "sectorId" : "1n6NQZxkQO4I77CD9nbMOPvSESS"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa407"),
+        "title" : "research work",
+        "sectorId" : "1n6NU3NJdQ8YApEH3j3smPHh942"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa408"),
+        "title" : "Collecting & reviewing customer feedback",
+        "sectorId" : "1n6Nb8iLXjO68TaXWPGV8T5UR7T"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa409"),
+        "title" : "Managing sales and customer data",
+        "sectorId" : "1n6NlknOimqk83NuJBCojE7bRgg"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa40a"),
+        "title" : "Customer handling",
+        "sectorId" : "1n8miNwOL3UbFVPppZQdhlw31tk"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa40b"),
+        "title" : "Pitching in stores ",
+        "sectorId" : "1n8mnEk82fQcWpWMjrCAM1iUjJI"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa40c"),
+        "title" : "Collecting & reviewing customer feedback",
+        "sectorId" : "1n8mz1ZRlkwC8mB5EdLzlb5GCSY"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa40d"),
+        "title" : "Sales sheet management",
+        "sectorId" : "1nKO3cmWRexGy9Pd3OWpuFWZqpq"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa40e"),
+        "title" : "scholarship department",
+        "sectorId" : "1nQGbZ43e4ZbOYIXaSJu1qSZIaR"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa410"),
+        "title" : "Piegon Media Pvt Ltd",
+        "sectorId" : "1nTfLdfEkPLrJiUBUNVZ3s13UH6"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa411"),
+        "title" : "Service and eLearning",
+        "sectorId" : "1nc0bsgjMOXvBJ8JXK6DSEeJQxK"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa413"),
+        "title" : "HR and eLearning",
+        "sectorId" : "1nc0iA3rvJ6QDlJcK6HtacHOIK2"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa414"),
+        "title" : "Social Welfare Department",
+        "sectorId" : "1nsSOt25lr2WDdr3ANkfHPQtmUt"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa415"),
+        "title" : "Digital marketing ",
+        "sectorId" : "1ntBS0BRFgLXNCD4Bg8yMxVOHif"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa419"),
+        "title" : "Business sector ",
+        "sectorId" : "1nvOw09YdXKVzhttBjzyjK4ycAR"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa41a"),
+        "title" : "john deere company",
+        "sectorId" : "1o0bl8vfKyNKOQbPlLeA1QpXohD"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa41b"),
+        "title" : "asn technosoft private limited",
+        "sectorId" : "1pRCMChXiYCfVbvsPIhOdaAY8hH"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa41c"),
+        "title" : "Sahyadri Ayurvedic Life",
+        "sectorId" : "1pZ09zZG0XriV73vJYq5TGu7j6R"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa41d"),
+        "title" : "S Expert Engineers",
+        "sectorId" : "1q6RJeJIkcgaEt0aq4G2WnyDWZr"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa41f"),
+        "title" : "data entry",
+        "sectorId" : "1r7OuQVkoX4u27mCaHxHmAXcHA7"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa420"),
+        "title" : "sahyadri aruvedic life care ",
+        "sectorId" : "1rscggvDkEm2Cy1zlDt1RRHm3Qo"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa423"),
+        "title" : "accountat & quality ",
+        "sectorId" : "1sw52ndVkGPW1TsKF1FRk69CN2f"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa424"),
+        "title" : "Sanriya investments",
+        "sectorId" : "1swCt7C9g6bqZ20wzOLeKqQcoRM"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa425"),
+        "title" : "NHRD",
+        "sectorId" : "1sxiFof6nOUV0zMRzC2ZatkIsOM"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa426"),
+        "title" : "sales",
+        "sectorId" : "1syJ4jQksKBzqViKWu39jSylkbN"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa427"),
+        "title" : "Online Marketing",
+        "sectorId" : "1syJ9FzvPDGtU4maslTHXyrLEFZ"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa428"),
+        "title" : "Sales Data Management",
+        "sectorId" : "1syJGsEsitDycCoLrdcA4OKYBLF"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa429"),
+        "title" : "Customer Data Management",
+        "sectorId" : "1syJIv7OPNR8RwBjQlgOpm4eGkm"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa42a"),
+        "title" : "Product Packaging",
+        "sectorId" : "1syJNGJeWpyD7gGa7Rdq6fyHugl"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa42b"),
+        "title" : "excel point computer",
+        "sectorId" : "1synNwvijsxhAfy7eOKRfqcrKhS"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa42c"),
+        "title" : "sale",
+        "sectorId" : "1t19nui5zyuCC44dwEwtSvdQ6tt"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa42f"),
+        "title" : "Adhiraj Computer Institute",
+        "sectorId" : "1t54jte2nXrgjAgFHO91XLKMUhE"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa430"),
+        "title" : "Shravani infotech",
+        "sectorId" : "1t6li6mweoJnClKlnAEChb642cF"
+    },
+    {
+        "_id" : ObjectId("61162fc5de64e1e8ae2fa433"),
+        "title" : "sanriya investment ",
+        "sectorId" : "1tALe87Lvlr6rTiDmHCvCDIpHmP"
+    }
+]
+
+

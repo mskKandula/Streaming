@@ -1,0 +1,78 @@
+1. CREATE TABLE InvoiceStudents(
+id INT NOT NULL AUTO_INCREMENT,  
+invoiceId VARCHAR(30) NOT NULL, 
+studentId VARCHAR(30) NOT NULL, 
+clientId VARCHAR(30) NOT NULL, 
+payingClientId VARCHAR(30),
+academicProfileId VARCHAR(30) NOT NULL, 
+academicYearId VARCHAR(30) NOT NULL,
+affiliationAuthorityId VARCHAR(30) NOT NULL,
+invoiceDate TIMESTAMP, 
+utilizationDate TIMESTAMP,
+deletionDate TIMESTAMP DEFAULT NULL,
+isStudentDeleted BOOLEAN,
+lUsedAmount INT,
+lTotalFee INT NOT NULL,
+vsDeductionFrom VARCHAR(10),
+createdOn TIMESTAMPNOT NULL DEFAULT CURRENT_TIMESTAMP,
+modifiedOn TIMESTAMP,
+PRIMARY KEY (invoiceId,studentId,academicProfileId),
+INDEX (clientId,payingClientId)   
+);
+
+
+2. db.getCollection('StudentAcademicProfiles').aggregate([
+{$match:{
+    $and:[{"invoice.invoiceId":{$ne:""}},{"invoice.invoiceId":{$exists:true}}]
+    
+    }
+    },
+{
+     $addFields: {
+      "lUsedAmount":100,
+      "lTotalFee":100,
+     }
+   },
+   {"$project":{
+    "_id":0,
+    "academicProfileId":1,
+    "studentId":"$student.studentId",
+    "invoiceId":"$invoice.invoiceId",
+    "invoiceDate":"$invoice.invoiceDate",
+    "utilizationDate":"$invoice.paymentDate",
+    "academicYearId":"$academicYear.academicYearId",
+    "affiliationAuthorityId":"$affiliationAuthority.affiliationAuthorityId",
+    "vsDeductionFrom":"Invoice",
+     "lUsedAmount":1,
+       "lTotalFee":1,
+    "clientId":1,
+    "payingClientId":"$clientId",
+    "isStudentDeleted":"$isDeleted",
+    "deletionDate":{"$cond":[{ $eq: [ "$isDeleted", true ] },"$modifiedOn",null]}
+ }}]).toArray()
+
+3. Online Conversion of Json to CSV
+
+
+4. LOAD DATA LOCAL INFILE "/path/to/InvoiceStudents.csv" INTO TABLE InvoiceStudents
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(academicProfileId,clientId,lUsedAmount,lTotalFee,
+studentId,invoiceId,invoiceDate,utilizationDate,
+academicYearId,affiliationAuthorityId,vsDeductionFrom,
+payingClientId,isStudentDeleted,deletionDate);
+
+5.select lTotalFee - sum(lUsedFee) as total,InvoiceId
+ from InvoiceStudents where clientId,academicYearId,affiliationAuthorityId
+ group by (invoiceId) having total > amount;
+
+if no invoiceId found go for multiple 
+
+6. select lTotalFee - sum(lUsedFee) as total,InvoiceId
+ from InvoiceStudents where clientId,academicYearId,affiliationAuthorityId
+ group by (invoiceId) having total > 0;
+
+7. UPDATE InvoiceStudents 
+SET lUsedAmount= value1
+WHERE id=;

@@ -1,0 +1,44 @@
+Note : Please call the activity "CreateAffiliationAuthorities" 
+       with below data (individual objects) from PostMan.
+
+
+{
+    "city" : "Anantapur",
+    "authourizationType" : "WBLInstitute",
+    "abbreviation" : "IGNOU",
+    "address" : "Anantapur",
+    "authorityTypeName" : "IGNOU",
+    "fax" : "08554-255244/255295",
+    "affiliationAuthorityName" : "Indira Gandhi National Open University (IGNOU)",
+    "authorityType" : "MKCL",
+    "email" : "vcatpsk@yahoo.com",
+    "state" : {
+        "stateId" : 7.0,
+        "stateName" : "Delhi"
+    },
+    "website" : "",
+    "country" : {
+        "countryName" : "India",
+        "countryId" : 113.0
+    }
+},
+{
+    "address" : "Anantapur",
+    "email" : "vcatpsk@yahoo.com",
+    "authorityTypeName" : "YCMOU",
+    "authourizationType" : "WBLInstitute",
+    "fax" : "08554-255244/255295",
+    "state" : {
+        "stateId" : 7.0,
+        "stateName" : "Delhi"
+    },
+    "website" : "",
+    "authorityType" : "MKCL",
+    "country" : {
+        "countryId" : 113.0,
+        "countryName" : "India"
+    },
+    "abbreviation" : "YCMOU",
+    "affiliationAuthorityName" : "Yashwantrao Chavan Maharashtra Open University (YCMOU)",
+    "city" : "Anantapur"
+}

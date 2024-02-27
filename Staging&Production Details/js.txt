@@ -1,0 +1,9 @@
+ let standardList = []
+            this.standards.filter((obj) => {
+              let data = (({ standardId, standardName }) => ({
+                standardId,
+                standardName
+              }))(obj)
+              standardList.push(data)
+
+https://stackoverflow.com/questions/42295340/how-to-clear-state-in-vuex-store

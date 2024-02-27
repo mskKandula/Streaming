@@ -1,0 +1,2 @@
+db.getCollection('SystemRoles').updateMany({"roleApplicableTo" :"College"},
+{$push : {"roleApplicableTo" :"StudyCenter"}})

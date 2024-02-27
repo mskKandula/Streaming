@@ -1,0 +1,6 @@
+Your username is: IN270700010
+Password: lms123
+
+InstituteId: IN270700010
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/15390184835989943397

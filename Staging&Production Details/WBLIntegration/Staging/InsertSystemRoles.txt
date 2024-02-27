@@ -1,0 +1,53 @@
+Note : Please call the activity "CreateSystemRoles" 
+       with below data (individual objects) from PostMan.
+
+
+{
+    "clientId" : "",
+    "isActive" : true,
+    "isSystem" : true,
+    "roleDescription" : "Mentor who manages workbased learning",
+    "roleName" : "Mentor",
+    "collectionName" : "Mentor",
+    "displayName" : "Mentor",
+    "isDeleted" : false,
+    "isPublic" : false,
+    "roleApplicableTo" : [ 
+        "WBLInstitute"
+    ]
+},
+
+{
+    "isDeleted" : false,
+    "roleDescription" : "Who represents the workplace",
+    "isPublic" : true,
+    "displayName" : "Representative",
+    "isActive" : true,
+    "isSystem" : true,
+    "collectionName" : "",
+    "roleName" : "Representative",
+    "roleApplicableTo" : [ 
+        "WorkPlace", 
+        "PlacementPartner"
+    ]
+},
+
+{
+    "loginNameLastSequenceNumber" : 10.0,
+    "collectionName" : "AffiliationAuthorities",
+    "isPublic" : true,
+    "displayName" : "Affiliation Authority",
+    "isActive" : true,
+    "isDeleted" : false,
+    "roleName" : "AffiliationAuthority",
+    "clientId" : "",
+    "isSystem" : true,
+    "roleDescription" : "affiliation Authority",
+    "roleApplicableTo" : [ 
+        "School", 
+        "College", 
+        "PlacementPartner", 
+        "ALC", 
+        "WBLInstitute"
+    ]
+}

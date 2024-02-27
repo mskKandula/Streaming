@@ -1,0 +1,158 @@
+db.getCollection('StudentAcademicProfiles').aggregate([{$match:
+{"clientId":"1zlo0DhtUVCeG1Izw2cAIJrlGHF",
+"standard.standardId":"21lJfQ049H2ZvtUtWslPto9sUTE","isActive":true,"isDeleted":false}},
+{$lookup: {"from": "Tests","localField": "standard.standardId","foreignField": "standard.standardId",
+"as": "testData"}},{$unwind:{path: "$testData"}},
+{$match:{"testData.testName":/Course End Test/}},
+{$group:{_id:"$testData.subjects.subjectName",count:{$sum:1}}}])
+
+
+db.getCollection('StudentAcademicProfiles').aggregate([{$match:
+{"clientId":"1zlo0DhtUVCeG1Izw2cAIJrlGHF",
+ "standard.standardId":"21lJfQ049H2ZvtUtWslPto9sUTE","isActive":true,"isDeleted":false}},
+{$count:"total"}])
+
+
+db.getCollection('StudentTestSubmissions').aggregate([{$match:
+{"clientId":"1zlo0DhtUVCeG1Izw2cAIJrlGHF","evaluation":{$exists:true},
+"test.testName":/Course End Test/}},{$group:{_id:"$subject.subjectName",count:{$sum:1}}}])
+
+
+
+db.getCollection('StudentTestSubmissions').aggregate([{$match:
+    {"clientId": "1zlo0DhtUVCeG1Izw2cAIJrlGHF",
+     "evaluation" : {$exists:true},"test.testName":/Course End Test/}},
+    {$lookup: {"from": "StudentProfiles","localField": "studentId",
+    "foreignField": "studentId","as": "studentData"}},
+    {$unwind:{path: "$studentData",preserveNullAndEmptyArrays: true}},
+    {$group:{_id:"$subject.subjectName",count:{$sum:1}}}])
+
+
+
+
+db.getCollection('StudentTestSubmissions').aggregate([{$match:
+    {"clientId": "1zlo0DhtUVCeG1Izw2cAIJrlGHF",
+     "evaluation" : {$exists:true},"standard.standardName":/^B.Sc/, "test.testName":/Course End Test/}},
+    {$lookup: {"from": "StudentProfiles","localField": "studentId",
+    "foreignField": "studentId","as": "studentData"}},{$unwind:{path: "$studentData"}}])
+
+
+
+db.getCollection('StudentAcademicProfiles').aggregate([
+{$match:{"clientId": "1zlo0DhtUVCeG1Izw2cAIJrlGHF","standard.standardName":/^B.Sc/,
+"isActive":true,"isDeleted":false}},
+{$lookup:{"from": "StudentTestSubmissions","localField": "academicProfileId",
+"foreignField": "academicProfileId","as": "testData"}},
+{$unwind:{path:"$testData",preserveNullAndEmptyArrays:true}},
+{$match:{"testData.test.testName":/Course End Test/}},{$count:"total"}])
+
+
+64
+single assignment on mini project
+64 * 6 for monthly
+
+
+
+db.StudentAcademicProfiles.aggregate([{$match:{isDeleted:false,
+'standard.standardName':'YBBA FY Semester 1','clientId':'1zlo0DhtUVCeG1Izw2cAIJrlGHF'}},
+{$lookup:{from: "Assignments",localField: "standard.standardId",foreignField: "standard.standardId",
+as: "AllAssignments"}},{$unwind:{path:"$AllAssignments"}},
+{$match:{'AllAssignments.assignmentName':{$in:[/Mini Project/]}}},{$lookup:{
+from: "StudentAssignmentSubmissions",localField: "AllAssignments.assignmentId",
+foreignField: "assignmentId",as: "FinalOutput"}},{$unwind:{path:"$FinalOutput"}},
+{$group: { _id:{"assignmentId":"$AllAssignments.assignmentId",'stuId':'$student.studentId'},
+student:{$first: '$student'},rollNumber:{$first:'$rollNumber'},standard:{$first:'$standard'},
+assignment:{$first:'$AllAssignments'},'obtainedScore':{ $sum:{$cond:{ if:{ $and:[ {
+$eq: [ "$student.studentId", '$FinalOutput.studentId' ]}, {
+$eq: [ "$AllAssignments.assignmentId", '$FinalOutput.assignmentId']}]},
+then: '$FinalOutput.score', else: "Assignment Not Attempted" }}},
+'submissionDate':{ $max: {   $cond: { if: { $and:[ {
+$eq: [ "$student.studentId", '$FinalOutput.studentId' ]}, {
+$eq: [ "$AllAssignments.assignmentId", '$FinalOutput.assignmentId' ]}] },then:
+{$dateToString: {format: "%d-%m-%Y %H:%M", date: {$toDate:"$FinalOutput.submissionDate"},timezone: "+05:30" } }
+, else: "01-01-1900 00:00" }}},
+ 'evaluationResult': {$addToSet: {   $cond: { if: { $and:[ {
+$eq: [ "$AllAssignments.assignmentId", '$FinalOutput.assignmentId' ]},{
+$eq: [ "$student.studentId", '$FinalOutput.studentId' ]}]},
+then: '$FinalOutput.remark', else: "" }}},},},
+{$project:{
+    "_id":0,
+        "RollNumber":"$rollNumber",
+        "Name":"$student.fullName",                      
+        "StandardName":"$standard.standardName",
+        "SubjectCode":"$assignment.subject.subjectCode",
+        "SubjectName":"$assignment.subject.subjectName",
+        "AssignmentName":"$assignment.assignmentName",
+        "Submission Date":'$submissionDate',
+        "ObtainedScore":"$obtainedScore",
+        "TotalMarks":"$assignment.totalScore",
+        "EvaluationResult":{
+        $reduce: {
+       input: "$evaluationResult",
+        initialValue: "",
+       in: { $concat : ["$$value","$$this"] }} }},}]).toArray();
+
+
+
+
+db.getCollection('StudentAssignmentSubmissions').aggregate([{$match:
+ {"clientId": "1zlo0DhtUVCeG1Izw2cAIJrlGHF",
+ "standard.standardName":"YBBA FY Semester 1", "assignmentName":/Mini Project/}},
+    {$lookup: {"from": "StudentProfiles","localField": "studentId",
+    "foreignField": "studentId","as": "studentData"}},{$unwind:{path: "$studentData"}},
+    {$project:{"_id":0,"RollNumber":"$studentData.academicProfile.rollNumber",
+        "Name":"$studentData.fullName",
+        "EmailId":"$studentData.emailId",                          
+        "StandardName":"$standard.standardName",
+        "SubjectCode":"$subject.subjectCode",
+        "SubjectName":"$subject.subjectName",
+        "AssignmentName":"$assignmentName",
+        "Submission Date":{ $dateToString: { format: "%d-%m-%Y %H:%M", 
+         date: {$toDate:"$submissionDate"},timezone: "+05:30" } },
+         "self Evaluation Marks":"$selfScore",
+         "IsEvaluated":"$isEvaluated",
+        "ObtainedMarks":"$score",
+        "TotalMarks":"$totalScore",
+        "Remark":"$remark"}},
+        {$sort:{"RollNumber":1}}]).toArray()
+
+db.StudentAcademicProfiles.aggregate([{$match:{isDeleted:false,
+'standard.standardName':'YBBA FY Semester 1','clientId':'1zlo0DhtUVCeG1Izw2cAIJrlGHF'}},
+{$lookup:{from: "Assignments",localField: "standard.standardId",foreignField: "standard.standardId",
+as: "AllAssignments"}},{$unwind:{path:"$AllAssignments"}},
+{$match:{'AllAssignments.assignmentName':{$in:[/Monthly Work Report/]}}},{$lookup:{
+from: "StudentAssignmentSubmissions",localField: "AllAssignments.assignmentId",
+foreignField: "assignmentId",as: "FinalOutput"}},{$unwind:{path:"$FinalOutput"}},
+{$group: { _id:{"assignmentId":"$AllAssignments.assignmentId",'stuId':'$student.studentId'},
+student:{$first: '$student'},rollNumber:{$first:'$rollNumber'},standard:{$first:'$standard'},
+assignment:{$first:'$AllAssignments'},'obtainedScore':{ $sum:{$cond:{ if:{ $and:[ {
+$eq: [ "$student.studentId", '$FinalOutput.studentId' ]}, {
+$eq: [ "$AllAssignments.assignmentId", '$FinalOutput.assignmentId']}]},
+then: '$FinalOutput.score', else: "Assignment Not Attempted" }}},
+'submissionDate':{ $max: {   $cond: { if: { $and:[ {
+$eq: [ "$student.studentId", '$FinalOutput.studentId' ]}, {
+$eq: [ "$AllAssignments.assignmentId", '$FinalOutput.assignmentId' ]}] },then:
+{$dateToString: {format: "%d-%m-%Y %H:%M", date: {$toDate:"$FinalOutput.submissionDate"},timezone: "+05:30" } }
+, else: "01-01-1900 00:00" }}},
+ 'evaluationResult': {$addToSet: {   $cond: { if: { $and:[ {
+$eq: [ "$AllAssignments.assignmentId", '$FinalOutput.assignmentId' ]},{
+$eq: [ "$student.studentId", '$FinalOutput.studentId' ]}]},
+then: '$FinalOutput.remark', else: "" }}},},},
+{$project:{
+    "_id":0,
+        "RollNumber":"$rollNumber",
+        "Name":"$student.fullName",                      
+        "StandardName":"$standard.standardName",
+        "SubjectName" : "Monthly Work Report",
+        "SubjectCode" : "MWR1",
+        "AssignmentName":"$assignment.assignmentName",
+        "Submission Date":'$submissionDate',
+        "self Evaluation Marks":'$FinalOutput.isEvaluated.selfScore',
+        "IsEvaluated":'$FinalOutput.isEvaluated',
+        "Obtained Marks":"$obtainedScore",
+        "Total Marks":"15",
+        "Remark":{
+        $reduce: {
+       input: "$evaluationResult",
+        initialValue: "",
+       in: { $concat : ["$$value","$$this"] }} }},}]).toArray();

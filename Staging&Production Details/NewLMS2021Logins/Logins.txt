@@ -1,0 +1,38 @@
+Development Server Url : https://newlmsdevp.mkcl.org/lms/#/
+Admin : IN270700004
+Teacher : mohanak1t,saik1t,krishnak1t
+student : suyogc1,mrunalinip1
+password: lms123
+
+Your username is: IN281400009
+Password: lms123
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/16390916619699768424
+
+---------------SuperAdmin--------------------------
+Url : https://newlmsdevp.mkcl.org/lms/#/superAdmin
+username is: SuperAdmin
+Password: lms123
+
+
+
+
+Staging Server Url : https://newlmsstg.mkcl.org/lms/#/
+Admin : IN281500001
+Teacher : mohanak1t,krishnak1t
+student : saik1,
+password: lms123
+
+
+
+
+Production Url : https://era.mkcl.org/lms/#/787697661312134
+
+Production test institute:MKCL Test School
+
+production ALC Url: https://era.mkcl.org/alclms/#/
+
+for production Test
+https://era.mkcl.org/lms/#/7876976613121348359
+IN272500001
+123lms

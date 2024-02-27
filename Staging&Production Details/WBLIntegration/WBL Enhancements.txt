@@ -1,0 +1,42 @@
+1. Navigate to student dashboard directly if only one 
+profile (Mohan Done)
+2. if No profile, give msg as 
+"All you Profile has been deleted, Please contact Admin"(Mohan Done)
+3. Need Livedemy URL in student Login(Mohan Done)
+
+
+multiselect students in student workplace 
+association(Mohan Done)
+
+multiselect students in student mentor 
+association(Explained to mrunalini, Done)
+
+
+multiselect students in student department 
+association(Explained to Ajay, Done)
+
+institute workplace association date should start from 
+academic year start date(Explained to Ajay & done)
+
+same student can allocated to diffrent mentor if student 
+status is inactive(Explained to Ajay & done)
+
+If student is shifting from one workplace to another then 
+ask him reason to deactivate(Mohan Done) 
+
+copy system roles according to Institute
+(Discussed with mrunalini, Mohan Done)
+
+show job profile after department on student dept 
+allocation(Mohan Done)
+
+send mail when student workplace change and status 
+should be inactive for first workplace(Mohan done)
+
+disable all the profiles if latest academic profile is not 
+payment Confirmed(Mohan done)
+
+upload workplace through excel(Mohan Done)
+
+if disassociated with one workplace ...then test,assignment 
+should not show to the student (Mohan & Ajay Done)

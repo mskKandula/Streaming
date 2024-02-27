@@ -1,0 +1,23 @@
+unc triplets(a []int32, b []int32, c []int32) int64 {
+var (
+    res int64
+    dict=make(map[string]int8)
+)
+for _,first :=range a{
+    for _,second:=range b{
+        if first > second{
+            continue
+        }else{for _,third:=range c{
+            if first <= second && second >= third{
+                str :=fmt.Sprintf("%d-%d-%d",first,second,third)
+                _,ok:=dict[str];if !ok{
+                    res++
+                    dict[str]=1
+                }
+            }
+        }
+    }
+    }
+}
+return res
+}

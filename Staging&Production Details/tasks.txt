@@ -1,0 +1,47 @@
+deletion of content/unit on published toc
+
+faculty registration mail on workplace registration
+
+
+
+https://mahedihasanjisan.medium.com/apis-python-intermediate-116365f9b786
+
+1 2 5 3 7 8 6 4
+
+first,second,third =1,2,3
+
+
+for i=0;i<qLen;i++{
+        
+	if q[i] == first{
+		first = second
+		second = third
+		third++
+	}else if q[i]==second{
+		total+=1
+		second=third
+		third++
+	}else if q[i]==third{
+		total+=2
+		third++
+	}else{
+		fmt.Println("Too chaotic")
+		return
+	}
+}
+
+
+
+db.getCollection('TeacherStandardSubjects').aggregate([{$match:{clientId:"1yUDUi0QGoB9VfOTCBdHCFwjk0C"}},
+{$project:{"clientId":1,"subjectId":"$subject.subjectId","subjectName":"$subject.subjectName",
+"standardId":"$standard.standardId","standardName":"$standard.standardName","facultyId":"$teacher.facultyId"}},
+{$lookup:{"from":"Assignments","localField": "facultyId",
+"foreignField": "facultyId","as":"AssignmentDetails"}},{$unwind:"$AssignmentDetails"},
+{$group:{"_id":{"subjectId":"$AssignmentDetails.subjects.subjectId","facultyId":"$facultyId",
+"standardId":"$AssignmentDetails.standard.standardId"},"subjectName":{$first:"$AssignmentDetails.subjects.subjectName"},
+"standardName":{$first:"$AssignmentDetails.standard.standardName"},"Assignmentcount":{$sum:1}}},{"$lookup":{"from": "Tests", 
+"localField": "_id.subjectId", "foreignField": "subjects.subjectId","as":"TestDetails"}},
+{$unwind:{"path":"$TestDetails","preserveNullAndEmptyArrays": true}},{$group:{"_id":{"subjectId":"$TestDetails.subjects.subjectId",
+"facultyId":"$TestDetails.facultyId","subjectName":"$TestDetails.subjects.subjectName","standardId":"$TestDetails.standard.standardId",
+"standardName":"$TestDetails.standard.standardName"},"TestsCount":{$sum:1}}},
+{$addFields:{"assign":"$Assignmentcount"}}])

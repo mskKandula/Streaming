@@ -1,0 +1,44 @@
+How to run your website for less than $6/year.
+
+Domain
+- Namecheap
+
+FREE Static Site hosting
+- Netlify
+- Vercel
+- Github Pages
+- Render
+- Firebase Hosting
+- Surge
+- Cloudflare pages
+
+Free DB
+- Supabase
+- Mongo Atlas
+
+FREE Backend
+- Netlify functions
+- Vercel
+- Google functions
+
+
+
+Can you relate? 😅
+
+Learn SQL with me for free - you need it for data science! 👇
+
+Take my free SQL Masterclass GitHub course with over 900 ⭐️’s - a cryptocurrency case study with 50+ questions with code solutions!
+
+Join the 8 Week SQL Challenge and solve 8 realistic case studies using your SQL skills - some of these exercises are now used for actual hiring interviews across the world!
+
+Sign up for a free 10 day trial on O’Reilly and take my SQL Simplified course and learn SQL fundamentals from scratch using O’Reilly’s interactive Katacoda platform!
+
+I’ll share links for all 3 in the comments below 👇
+
+- - -
+
+Follow me Danny Ma and ding the 🔔 to get notified of my posts immediately!
+
+I share free resources including limited time Udemy coupons every now and then 🙂
+
+#DataScience #Data #Analytics

@@ -1,0 +1,23 @@
+URLS : http://stg-wblycmou.mkcl.org/
+       http://stg-wblycmou.mkcl.org/ip/#/
+       http://stg-wblycmou.mkcl.org/mentor/#/
+       http://stg-wblycmou.mkcl.org/university/#/
+       http://stg-wblycmou.mkcl.org/admin/#/
+      
+Ip : ip@mkcl.org
+password : ip@mkcl.org
+
+mentor : swapnilra@mkcl.org
+password: swapnilra@mkcl.org
+
+university : rutikap@mkcl.org
+password : rutikap@mkcl.org
+
+admin : admin@mkcl.org
+password : qwerty123
+
+admin : samiksham@mkcl.org
+password : samiksham@mkcl.org
+
+Candidate : mrunalinip@mkcl.org
+password : 1234567

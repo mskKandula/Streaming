@@ -1,0 +1,5 @@
+DB Name : AMSFramework
+IP : 172.31.10.114
+Port : 2016
+userName : writer
+password : writer#123

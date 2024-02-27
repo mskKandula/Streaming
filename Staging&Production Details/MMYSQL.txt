@@ -1,0 +1,20 @@
+select h.hacker_id, h.name
+from submissions s
+inner join challenges c
+on s.challenge_id = c.challenge_id
+inner join difficulty d
+on c.difficulty_level = d.difficulty_level 
+inner join hackers h
+on s.hacker_id = h.hacker_id
+where s.score = d.score and c.difficulty_level = d.difficulty_level
+group by h.hacker_id, h.name
+having count(s.hacker_id) > 1
+order by count(s.hacker_id) desc, s.hacker_id asc
+
+
+select w.id,wp.age,w.coins_needed,w.power 
+from wands w
+join wands_property wp on
+w.code = wp.code
+where wp.is_evil=0 and w.coins_needed = (select min(coins_needed) from wands w1 join wands_property wp1 on w1.code = wp1.code where w1.power = w.power and wp1.age=wp.age )
+order by w.power desc, wp.age desc;

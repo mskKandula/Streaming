@@ -1,0 +1,15 @@
+//Run query on "InstituteTypes" Collection
+
+db.getCollection('InstituteTypes').insertOne({
+    "instituteTypeName" : "PrivateInstitute",
+    "instituteTypeId" : "10",
+    "loginToBeConsidered" : true,
+    "isEnabled" : true,
+    "instituteRegistrationFlow" : "From New LMS",
+    "intakeControl" : true,
+    "paymentRequired" : true,
+    "admissionEmailGeneration" : "Confirmation",
+    "loginGeneration" : true,
+    "fieldNameForDefaultLogin" : "",
+    "fieldNameForDefaultPassword" : "lms123"
+})

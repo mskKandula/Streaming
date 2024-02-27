@@ -1,0 +1,27 @@
+Multiselect students in student workplace association
+
+Multiselect students in student mentor association
+
+Multiselect students in student department association
+
+Same student can allocated to diffrent mentor if student 
+status is inactive
+
+If student is shifting from one workplace to another then 
+ask him reason to deactivate
+
+Send mail when student workplace change(Association & Disassociation) 
+and status should be inactive for first workplace
+
+Disable all the profiles if latest academic profile is not 
+payment Confirmed
+
+If disassociated with one workplace ...then test,assignment,quiz & homework 
+should not show to the student.
+
+Livedemy URL in student Login
+
+Student Multiple Standards,Active Profiles & Proper Navigation to
+specific profile on selection
+
+Student Transfer from one standard to another

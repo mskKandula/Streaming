@@ -1,0 +1,49 @@
+-Run below queries on NewLMS2021_STGDB @ 10.2.11.79 :27017
+
+
+//"roleName" : "SuperAdmin"
+
+db.getCollection('SystemRoles').update(
+   { roleId: "1sTFzTBi9BMjB4QsdXUKYFAtEmd" },
+   { $push: { roleApplicableTo: { $each: [  ] } } }
+)
+
+
+// "roleName" : "InstituteAdmin"
+
+db.getCollection('SystemRoles').update(
+   { roleId: "1sTGCTX1nD9K27jKkj8qrBHyHeE" },
+   { $push: { roleApplicableTo: { $each: [ "School", "College", "ALC", "WBLInstitute", "WorkPlace", "PlacementPartner" ] } } }
+)
+
+
+//"roleName" : "Admin",
+
+db.getCollection('SystemRoles').update(
+   { roleId: "1sTGErqGBtXNUfJ27zLjuxKRDHW" },
+   { $push: { roleApplicableTo: { $each: [ "School", "College", "ALC", "WBLInstitute", "WorkPlace", "PlacementPartner" ] } } }
+)
+
+
+//"roleName" : "Teacher",
+
+db.getCollection('SystemRoles').update(
+   { roleId: "1sTl0QnGJaIvd4JNN7SAyghrZHM" },
+   { $push: { roleApplicableTo: { $each: [ "School", "College", "WBLInstitute", "WorkPlace" ] } } }
+)
+
+
+//"roleName" : "Student",
+
+db.getCollection('SystemRoles').update(
+   { roleId: "1shQGs3lSlLEmA3J6HjQbYdbxY0" },
+   { $push: { roleApplicableTo: { $each: [ "School","College","WBLInstitute","WorkPlace","PlacementPartner" ] } } }
+)
+
+
+//"roleName" : "ParentInstitute",
+
+db.getCollection('SystemRoles').update(
+   { roleId: "1vvoZeKcfkt7qZkOAjcbIMdWejo" },
+   { $push: { roleApplicableTo: { $each: [  ] } } }
+)

@@ -1,0 +1,321 @@
+db.FacultyProfiles.aggregate([
+
+    {
+        "$lookup":
+        {
+            "from": "Institutes",
+            localField: 'clientId',
+            foreignField: 'clientId',
+            "as": "institutes"
+        }
+    },
+    { "$unwind": '$institutes' },
+    {
+        "$lookup":
+        {
+            "from": "Faculties",
+            localField: 'facultyId',
+            foreignField: 'facultyId',
+            "as": "faculty"
+        }
+    },
+    { "$unwind": '$faculty' },
+    {
+        "$lookup": {
+            "from": "FacultyProfiles",
+            localField: 'facultyId',
+            foreignField: 'facultyId',
+            "as": "facultyProfiles"
+        }
+    },
+    { "$unwind": '$facultyProfiles' },
+    {
+        "$lookup":
+        {
+            "from": "InstituteUserBankDetails",
+            localField: "facultyId",
+            foreignField: "user.userId",
+            "as": "bankDetails"
+        }
+    },
+    { "$unwind": '$bankDetails' },
+
+    { $match: { 'roles.roleName': 'ProjectEvaluator', "faculty.isDeleted": false, "bankDetails.isDeleted": false } },
+
+    {
+        "$lookup": {
+            "from": "StudentProjects",
+            "let": { evaluatorId: "$faculty.facultyId" },
+            "pipeline":
+                [
+                    {
+                        "$match":
+                        {
+                            "subject.subjectId": "24xeV14IHWJwBR87zNJm13uOodH",
+                            "standard.standardId": "24xeSZ2zvjqXqtR1NeQjlk7UIKm",
+                        }
+                    },
+                    {
+                        '$addFields': {
+                            "projectReportNew": {
+                                "$cond": {
+                                    if:
+                                        { '$ne': ['$synopsis.evaluation', null] },
+                                    then: {
+                                        "$cond": {
+                                            if:
+                                                {  $isArray: "$synopsis.evaluation"  },
+                                            then: "$synopsis.evaluation",
+                                            else: { 'evaluation': [{ 'evaluatorId': 0 }] }
+
+                                        }
+                                    },
+                                    else: { 'evaluation': [{ 'evaluatorId': 0 }] }
+
+                                }
+                            }
+                        }
+                    }
+                ],
+            "as": "studentProjects"
+        }
+    },
+        {
+            "$unwind": "$studentProjects"
+        },
+
+        {
+            $addFields: {
+                "studentSynopsisCountForInstituteEvaluator": {
+                    $filter: {
+                input: "$studentProjects.synopsis.evaluation",
+                as: "item",
+                cond: {$eq: ["$$item.evaluatorId", "$faculty.facultyId"]}
+               },
+                }
+            }
+        },
+
+
+    {
+            $addFields: {
+                "studentProjectCountForInstituteEvaluator": {
+                    $filter: {
+                input: "$studentProjects.projectReport.evaluation",
+                as: "item",
+                cond: {$eq: ["$$item.evaluatorId", "$faculty.facultyId"]}
+               },
+                }
+            }
+        },
+        {
+            $addFields: {
+                "synopsisSubmitted": {
+                     $cond: {
+                        if: {
+                            $in:
+                                ["$faculty.facultyId","$studentProjects.synopsis.evaluation"]
+                        },
+                        then: {
+                            $eq:["Submitted","$studentProjects.synopsisStatus" ]
+                        },
+                        else: "$$REMOVE"
+                    }
+                }
+            }
+        },
+        {
+            $addFields: {
+                "synopsisApproved": {
+              $cond: {
+                        if: {
+                            $eq:
+                                 ["$studentProjects.synopsis.evaluator.evaluatorId","$faculty.facultyId"]
+                        },
+                        then: {
+                            $eq:["Approved","$studentProjects.synopsisStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        
+                    }
+                
+        }
+        }
+        },
+        {
+            $addFields: {
+                "synopsisRejected": {
+                    $cond: {
+                        if: {
+                            $eq:
+                                 ["$studentProjects.synopsis.evaluator.evaluatorId","$faculty.facultyId"]
+                        },
+                        then: {
+                            $eq:["Rejected","$studentProjects.synopsisStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        
+                    }
+                }
+            }
+        },
+        
+        {
+            $addFields: {
+                "synopsisApprovedWithSuggestion": {
+                    $cond: {
+                        if: {
+                            $eq:
+                                 ["$studentProjects.synopsis.evaluator.evaluatorId","$faculty.facultyId"]
+                        },
+                        then: {
+                            $eq:["Approved with Suggestion","$studentProjects.synopsisStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        
+                    }
+                }
+            }
+        },
+        {
+            $addFields: {
+                "projectApproved": {
+                    $cond: {
+                        if: {
+                            $eq:
+                                [ "$studentProjects.projectReport.evaluator.evaluatorId", "$faculty.facultyId"]
+                        },
+                        then: {
+                            $eq:["Approved","$studentProjects.projectReportStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        
+                    }
+                }
+            }
+        },
+        {
+            $addFields: {
+                "projectSubmitted": {
+                    $cond:{
+                    if:{
+                        $eq : [
+                            "$studentProjects.projectReport", null
+                        ]
+                    },
+                    then:{
+                        if: {
+                            $in:
+                                ["$faculty.facultyId","$studentProjects.projectReport.evaluation"]
+                        },
+                        then: {
+                            $eq:["Submitted","$studentProjects.projectReportStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        },
+                        else: "$$REMOVE"
+                    } 
+                }
+            }
+        },
+        {
+            $addFields: {
+                "projectRejected": {
+                    $cond: {
+                        if: {
+                            $eq:
+                                [ "$studentProjects.projectReport.evaluator.evaluatorId", "$faculty.facultyId"]
+                        },
+                        then: {
+                            $eq:["Rejected","$studentProjects.projectReportStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        
+                    }
+                }
+            }
+        },
+        {
+            $addFields: {
+                "projectApprovedWithSuggestion": {
+                    $cond: {
+                        if: {
+                            $eq:
+                                [ "$studentProjects.projectReport.evaluator.evaluatorId", "$faculty.facultyId"]
+                        },
+                        then: {
+                            $eq:["Approved With Suggestion","$studentProjects.projectReportStatus" ]
+                        },
+                        else: "$$REMOVE"
+                        
+                    }
+                }
+            }
+        },
+
+    {
+        $group: {
+            _id: "$facultyId",
+            instituteId: { $first: "$institute.instituteId" },
+            instituteName: { $first: "$institute.instituteName" },
+            facultyId: { $first: "$facultyId" },
+            facultyEmpCode: { $first: "$faculty.empCode" },
+            firstName: { $first: "$faculty.firstName" },
+            lastName: { $first: "$faculty.lastName" },
+            facultyEducation: { $first: "$faculty.education" },
+            facultyExperience: { $first: "$faculty.experience" },
+            bankName: { $first: "$bankDetails.bankDetails.bankName" },
+            branchName: { $first: "$bankDetails.bankDetails.branchName" },
+            IFSC: { $first: "$bankDetails.bankDetails.branchName" },
+            accountNumber: { $first: "$bankDetails.bankDetails.accountNumber" },
+            bioData: { $first: "$bankDetails.bankDetails.supportingDocument.userBiodataURL" },
+            passBook: { $first: "$bankDetails.bankDetails.supportingDocument.bankPassbookFileURL" },
+            panCard: { $first: "$bankDetails.bankDetails.supportingDocument.panCardFileURL" },
+            // studentProjects: { $first: "$studentProjects" }
+            studentSynopsisCountForInstituteEvaluator: { $addToSet: "$studentSynopsisCountForInstituteEvaluator" },
+            studentProjectCountForInstituteEvaluator: { $addToSet: "$studentProjectCountForInstituteEvaluator" },
+            synopsisSubmitted: {$addToSet:"$synopsisSubmitted"},
+            synopsisApproved:{$addToSet:"$synopsisApproved"},
+            synopsisRejected:{$addToSet:"$synopsisRejected"},
+            synopsisApprovedWithSuggestion: {$addToSet:"$synopsisApprovedWithSuggestion"},
+            projectSubmitted:{$addToSet:"$projectSubmitted"},
+            projectApproved:{$addToSet:"$projectApproved"},
+            projectRejected:{$addToSet:"$projectRejected"},
+            projectApprovedWithSuggestion:{$addToSet:"$projectApprovedWithSuggestion"}
+        }
+    },
+
+    {
+        $project: {
+            "instituteId": 1,
+            "instituteName": 1,
+            "facultyId": 1,
+            "facultyEmpCode": 1,
+            "firstName": 1,
+            "lastName": 1,
+            "facultyEducation": 1,
+            "facultyExperience": 1,
+            "bankName": 1,
+            "branchName": 1,
+            "IFSC": 1,
+            "accountNumber": 1,
+            "biodata": 1,
+            "passBook": 1,
+            "panCard": 1,
+            // "studentProjects": 1
+
+            //"evaluator":"$studentSynopsisCountForInstituteEvaluator",
+            "studentSynopsisCountForInstituteEvaluator": {"$size":"$studentSynopsisCountForInstituteEvaluator"},
+            "studentProjectCountForInstituteEvaluator": {"$size":"$studentProjectCountForInstituteEvaluator"},
+            "synopsisSubmitted": {"$size" : "$synopsisSubmitted" },
+            "synopsisApproved":{"$size":"$synopsisApproved"},
+            "synopsisRejected":{"$size":"$synopsisRejected"},
+            "synopsisApprovedWithSuggestion":{"$size":"$synopsisApprovedWithSuggestion"},
+            "projectSubmitted":{"$size":"$projectSubmitted"},
+            "projectApproved":{"$size":"$projectApproved"},
+            "projectRejected":{"$size":"$projectRejected"},
+            "projectApprovedWithSuggestion":{"$size":"$projectApprovedWithSuggestion"},
+
+        }
+    }
+]);

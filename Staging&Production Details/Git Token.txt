@@ -1,0 +1,76 @@
+git init (To initialize git in the respective folder)
+
+git add . (after new code/modified)
+
+git commit -m "commit message"
+
+git log --oneline
+
+if you want to check previous commit (git checkout hashnum)
+(In this case, you dnt see the changes after this commit)
+(if you want to keep the discarded changes/commits in another
+branch then "git branch branchName latestheadcommit" )
+
+***To make all commits as a single commit (git reset hashnum)
+(Here got to see the after changes of the current commit)
+
+Make sure everything is committed, and write down the latest commit id in case something goes wrong, or create a separate branch as the backup
+
+Run git reset --soft `git rev-list --max-parents=0 --abbrev-commit HEAD` to reset your head to the first commit, but leave your index unchanged. All changes since the first commit will now appear ready to be committed.
+
+Run git commit --amend -m "initial commit" to amend your commit to the first commit and change the commit message, or if you want to keep the existing commit message, you can run git commit --amend --no-edit
+
+Run git push -f to force push your changes****
+
+git branch -a (to see available branches)
+
+develop/work on a feature on new branch(feature branch)
+
+git checkout -b feature-branch
+
+git add .
+git commit -m "feature added"
+
+git checkout dev-branch/main
+
+git pull (fetch & merge)
+
+git fetch(jus fetch)
+
+git checkout feature-branch
+
+git merge dev-branch/main
+
+git push
+
+git branch -d feature-branch
+
+Github :
+
+Create a repoin github
+
+copy the url
+
+git remote add origin url
+
+git remote -v
+
+git push -u origin main
+
+if not works 
+
+git push main -f
+
+git branch -M main (to set as master)
+
+To pull remote branch to local:
+
+git fetch origin (This will update your local copy 
+so that it knows about the new branch.)
+
+git checkout remoteBranch
+
+
+
+
+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

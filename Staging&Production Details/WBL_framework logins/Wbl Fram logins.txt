@@ -1,0 +1,20 @@
+1)Candidate
+  userId - vishalgaikwad0775@gmail.com
+  pasword- qwerty123
+
+2)Mentor
+ userId- amitr@mkcl.org
+ pas- amitr#123
+
+3)Admin
+ userId - admin@mkcl.org
+ pas - qwerty123
+
+4)University
+ userId - aramteke@ignou.ac.in
+ pas- aramteke@ignou.ac.in
+
+5)IP
+ userId - ip@mkcl.org
+ pas- ip@mkcl.org
+

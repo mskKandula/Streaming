@@ -1,0 +1,27 @@
+Admin:
+
+Your username is: IN270500004
+Password: lms123
+
+InstituteId: IN270500004
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/2542500016054833754
+
+Faculty:
+
+Your username is: mohanak1t
+Password: lms123
+
+InstituteId: IN270500004
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/2542500016054833754
+
+
+Student:
+
+Your username is: suyogc1
+Password: lms123
+
+InstituteId: IN270500004
+
+Link for Login: http://newlmsdevp.mkcl.org/lms/#/2542500016054833754

@@ -1,0 +1,19 @@
+Note : Please call the activity "CreateSubjectTypes" 
+       with below data (individual objects) from PostMan.
+ 
+    {
+        "subjectTypeName" : "Theory",
+        "subjectTypeId" : "01"
+    },
+    {
+        "subjectTypeName" : "Practical",
+        "subjectTypeId" : "02"
+    },
+    {
+        "subjectTypeName" : "Theory & Practical",
+        "subjectTypeId" : "03"
+    },
+    {
+        "subjectTypeName" : "Project / Report",
+        "subjectTypeId" : "04"
+    }

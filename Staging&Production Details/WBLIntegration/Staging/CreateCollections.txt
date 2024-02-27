@@ -1,0 +1,7 @@
+-Run below queries on NewLMS2021_STGDB @ 10.2.11.79 :27017
+
+
+db.createCollection("InstituteWorkplaceAssociation")
+db.createCollection("StudentMentorAssociation")
+db.createCollection("Sectors")
+db.createCollection("SubjectTypes")

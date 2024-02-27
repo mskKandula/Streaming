@@ -1,0 +1,24 @@
+Note : Please call the activity "CreateAffiliationAuthorities" 
+       with below data (individual objects) from PostMan.
+
+
+{
+    "city" : "Pune",
+    "authourizationType" : ["PrivateInstitute"],
+    "abbreviation" : "SR",
+    "address" : "Pune",
+    "authorityTypeName" : "SR",
+    "fax" : "",
+    "affiliationAuthorityName" : "Self Recognized (SR)",
+    "authorityType" : "MKCL",
+    "email" : "",
+    "state" : {
+        "stateId" : 27.0,
+        "stateName" : "Maharashtra"
+    },
+    "website" : "",
+    "country" : {
+        "countryName" : "India",
+        "countryId" : 113.0
+    }
+}
